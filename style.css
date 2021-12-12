@@ -18,7 +18,8 @@ body{
     "description";
     border-radius: 20px;
     overflow: hidden;
-    margin: 100px
+    margin: 100px;
+
 }
 
 .order-img{
@@ -133,4 +134,126 @@ body{
 .cancel-order:hover{
     cursor: pointer;
     text-decoration-line: underline;
+}
+
+
+@media only screen and (max-width: 600px){
+    .order{
+        grid-template-columns: 336.75px;
+        grid-template-rows: 165px 360px;
+        border-radius: 15px;
+        margin: 75px;
+    }
+    .order-img{
+        grid-area: image;
+    }
+    .order-summary{
+        background-color: white;
+        grid-area: description;
+        padding: 41.25px 0px;
+        text-align: center;
+        
+    }
+    
+    .order-summary h1{
+        
+        font-weight: 900;
+        margin: 0;
+        font-size: 15px;
+        color: hsl(223, 47%, 23%);
+    }
+    
+    .order-summary p{
+        font-family: 'Red Hat Display', sans-serif;
+        font-weight: 500;
+        margin: 26.25px 60px;
+        font-size: 10px;
+        color: hsl(224, 23%, 55%);
+    }
+    
+    .plan{
+        background-color: hsl(225, 100%, 98%);
+        display: grid;
+        grid-template-columns: 35.25px 15.75px 69.75px 70.5px 39.75px;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "micon gap1 plan gap2 change";
+        align-items: center;
+        margin: 0px 37.5px;
+        padding: 17.25px 20.25px;
+        margin-bottom: 22.5px;
+    }
+    
+    .icon{
+        grid-area: micon;
+    }
+    
+    .plan-type{
+        grid-area: plan;
+    }
+    
+    .plan-type h2{
+        font-size: 11px;
+        margin: 0;
+        
+    }
+    
+    .plan-type p{
+        font-size: 11px;
+        margin: 0;
+    }
+    
+    .plan a{
+        grid-area: change;
+        font-size: 10px;
+    }
+    
+    .buttons{
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "po"
+        "co";
+        justify-items: center;
+    }
+    
+    
+    .place-order
+    {
+        grid-area: po;
+        border: none;
+        background-color: hsl(245, 75%, 52%);
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        padding: 12.75px 75px;
+        margin-bottom: 7.5px;
+        border-radius: 15px;
+        color: white;
+        font-weight: 700;
+        font-family: 'Red Hat Display', sans-serif;
+        font-size: 10px;
+    }
+    
+    .place-order:hover{
+        background-color:hsl(224, 23%, 55%);
+        cursor: pointer;
+    }
+    
+    .cancel-order{
+        grid-area: co;
+        border: none;
+        background-color: transparent;
+        padding: 0px 0px;
+        padding: 12.75px 75px;
+        margin-bottom: 7.5px;
+        border-radius: 15px;
+        color: hsl(224, 23%, 55%);
+        font-weight: 700;
+        font-family: 'Red Hat Display', sans-serif;
+        font-size: 10px;
+    }
+    
+    .cancel-order:hover{
+        cursor: pointer;
+        text-decoration-line: underline;
+    }
 }
